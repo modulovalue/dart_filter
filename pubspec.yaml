@@ -1,0 +1,14 @@
+name: dart_filter
+description: Filter pattern in Dart
+version: 1.0.0
+author: Modestas Valauskas <valauskasmodestas+dartpub@gmail.com>
+homepage: https://github.com/modulovalue/dart_filter
+repository: https://github.com/modulovalue/dart_filter
+issue_tracker: https://github.com/modulovalue/dart_filter/issues
+
+environment:
+  sdk: '>2.2.2 <3.0.0'
+
+dev_dependencies:
+  extra_pedantic: ^1.0.0
+  test: ^1.6.6
