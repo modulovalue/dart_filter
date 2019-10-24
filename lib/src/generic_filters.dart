@@ -1,8 +1,6 @@
 import 'package:dart_filter/dart_filter.dart';
 
 /// A criteria that accepts all values.
-///
-/// All instances are the same.
 class AcceptAllCriteria<T> extends FilterCriteria<T> {
   const AcceptAllCriteria();
 
@@ -17,8 +15,6 @@ class AcceptAllCriteria<T> extends FilterCriteria<T> {
 }
 
 /// A criteria that accepts no values.
-///
-/// All instances are the same.
 class AcceptNoneCriteria<T> extends FilterCriteria<T> {
   const AcceptNoneCriteria();
 
@@ -34,7 +30,7 @@ class AcceptNoneCriteria<T> extends FilterCriteria<T> {
 
 /// Accepts values that meet all the provided criteria.
 ///
-/// The given criteria cannot be null but can be empty
+/// The given criteria cannot be null but can be empty.
 ///
 /// If no criteria are provided then the [defaultCriteria] is used which
 /// defaults to [AcceptAllCriteria].
@@ -119,7 +115,8 @@ class XOrCriteria<T> extends FilterCriteria<T> {
     } else {
       final Iterable<bool> meets = criteria.map((a) => a.accepts(t));
 
-      /// If meets contains only a single true value then only one criteria is accepted which equals an XOR.
+      /// If meets contains only a single true value then only
+      /// one criteria is accepted which equals an XOR.
       return meets.where((a) => a).length == 1;
     }
   }
@@ -152,7 +149,7 @@ class AnonymousCriteria<T> extends FilterCriteria<T> {
 }
 
 /// Allows you to use existing filters on model objects of type [M]
-/// by specifying a mapping function from [M] to [M]
+/// by specifying a mapping function from [M] to [M].
 ///
 /// No == and hashCode.
 class MapCriteria<M, T> extends FilterCriteria<M> {
@@ -166,7 +163,7 @@ class MapCriteria<M, T> extends FilterCriteria<M> {
   bool accepts(M t) => criteria(mapTo(t));
 }
 
-/// Uses the == operator to compare a value and accepts only when that is true
+/// Uses the == operator to compare a value and accepts only when that is true.
 class EqualsCriteria<T> extends FilterCriteria<T> {
   final T value;
 

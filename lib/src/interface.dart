@@ -45,6 +45,18 @@ abstract class FilterCriteria<T> {
   /// and apply it to a user by telling which property of the user the criteria should apply to.
   FilterCriteria<M> map<M>(T Function(M) m) => MapCriteria<M, T>(m, accepts);
 
+  FilterCriteria<T> not() => NotCriteria(this);
+
+  FilterCriteria<T> and(FilterCriteria<T> other) => AndCriteria([this, other]);
+
+  FilterCriteria<T> operator &(FilterCriteria<T> other) => and(other);
+
+  FilterCriteria<T> or(FilterCriteria<T> other) => OrCriteria([this, other]);
+
+  FilterCriteria<T> operator |(FilterCriteria<T> other) => or(other);
+
+  FilterCriteria<T> xor(FilterCriteria<T> other) => XOrCriteria([this, other]);
+
   /// Convert this criteria to a list of criteria.
   Iterable<FilterCriteria<T>> get only => [this];
 
