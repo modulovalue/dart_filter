@@ -1,8 +1,9 @@
 import 'package:dart_filter/dart_filter.dart';
 
-/// A way to filter collections by using advanced criteria
+/// A way to filter collections by using advanced criteria.
 ///
-/// Loosely based on https://www.tutorialspoint.com/design_pattern/filter_pattern.htm
+/// Loosely based on
+/// https://www.tutorialspoint.com/design_pattern/filter_pattern.htm
 ///
 /// Pass the criteria for which to filter as a list of [T]
 ///
@@ -17,11 +18,10 @@ import 'package:dart_filter/dart_filter.dart';
 /// - [AcceptAllCriteria]   : Lets everything through.
 /// - [AcceptNoneCriteria]  : Lets nothing through.
 /// - [AndCriteria]         : Lets a value only through if it meets all criteria.
-/// - [OrCriteria]          : Lets a value only through if it meets at least or criteria.
+/// - [OrCriteria]          : Lets a value only through if it meets at least one criteria.
 /// - [XOrCriteria]         : Lets a value only through if it meets only one criteria.
 /// - [NotCriteria]         : Lets a value through if it doesn't meet the provided criteria.
 /// - [AnonymousCriteria]   : Lets you provide a criteria in the constructor without subclassing.
-/// and more
 ///
 /// For custom criteria subclass [FilterCriteria].
 ///
@@ -31,11 +31,11 @@ import 'package:dart_filter/dart_filter.dart';
 abstract class FilterCriteria<T> {
   const FilterCriteria();
 
-  /// Returns true when the item is accepted.
+  /// Return true when the item is accepted and should not be filtered out.
   bool accepts(T t);
 
   /// call is overridden so that every criteria can be passed to the
-  /// .where call on iterables.
+  /// .where call on iterables directly.
   bool call(T t) => accepts(t);
 
   /// Allows the current filter to be used on objects that can be mapped to [T].
