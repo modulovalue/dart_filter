@@ -1,3 +1,7 @@
+## 1.1.0+2 (2019-10-25)
+
+- typos & Readme badges added
+
 ## 1.1.0+1 (2019-10-24)
 
 - typos
