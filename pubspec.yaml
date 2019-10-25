@@ -1,6 +1,6 @@
 name: dart_filter
-description: High Level Filter Queries for Dart based of the Filter Pattern
-version: 1.1.0+2
+description: High Level Filter Queries for Dart inspired by the Filter Pattern
+version: 1.1.0+3
 author: Modestas Valauskas <valauskasmodestas+dartpub@gmail.com>
 homepage: https://github.com/modulovalue/dart_filter
 repository: https://github.com/modulovalue/dart_filter
