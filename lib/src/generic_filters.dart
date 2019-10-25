@@ -60,7 +60,7 @@ class AndCriteria<T> extends FilterCriteria<T> {
   }
 }
 
-/// Accepts values that meet one of the provided criteria.
+/// Accepts values that meet at least one of the provided criteria.
 ///
 /// The given criteria cannot be null but can be empty.
 ///
