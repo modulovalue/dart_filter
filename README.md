@@ -1,6 +1,8 @@
 # dart_filter
 High Level Filter Queries for Dart, loosely based of the [Filter pattern](https://www.tutorialspoint.com/design_pattern/filter_pattern.htm)
 
+[![Build Status](https://travis-ci.com/modulovalue/dart_filter.svg?branch=master)](https://travis-ci.com/modulovalue/dart_filter)
+
 [On pub.dev](https://pub.dev/packages/dart_filter#-readme-tab-)
 
 dart_filter lets you easily filter dart Lists and Iterables. New requirements oftentimes 

@@ -45,6 +45,7 @@ abstract class FilterCriteria<T> {
   /// and apply it to a user by telling which property of the user the criteria should apply to.
   FilterCriteria<M> map<M>(T Function(M) m) => MapCriteria<M, T>(m, accepts);
 
+  // ignore: use_to_and_as_if_applicable
   FilterCriteria<T> not() => NotCriteria(this);
 
   FilterCriteria<T> and(FilterCriteria<T> other) => AndCriteria([this, other]);
