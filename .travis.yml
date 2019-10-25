@@ -1,7 +1,8 @@
 language: dart
 dart:
-- stable
+  - dev
+  - stable
 dart_task:
-- dartfmt
-- test
-- dartanalyzer: --fatal-warnings lib
+  - dartfmt
+  - test
+  - dartanalyzer: --fatal-warnings lib
