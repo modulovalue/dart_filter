@@ -10,4 +10,5 @@ dart_task:
   - dartanalyzer: --fatal-warnings lib
 
 after_success:
-  - coveralls
+  - pub run test_coverage
+  - bash <(curl -s https://codecov.io/bash)
